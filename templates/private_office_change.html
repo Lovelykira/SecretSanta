@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{%block private_office%}
+    <li class="active"><a href="/private_office/"><span class="glyphicon glyphicon-home"></span> Santa's Office</a></li>
+{% endblock %}
+{% block main %}
+
+<form action="/private_office_change/" method="POST" class="private-office-form">
+{% csrf_token %}
+{{form.as_p}}
+<input type="submit" class="btn btn-primary private-office-change-btn" value="Готово"/>
+</form>
+{% endblock %}

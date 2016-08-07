@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{% block main %}
+
+{% if user.is_authenticated %}
+<h2>Добро пожаловать в Secret Santa 2016, {{user.username}}!</h2>
+{% else %}
+<h2>Добро пожаловать в Secret Santa 2016!</h2>
+{% endif %}
+<h3>Правила: </h3>
+<div class="rules">
+    <ol>
+    <li> Регистрация. </li>
+    <li> Великий рандом определяет кто чей Санта. </li>
+    <li>??????</li>
+    <li>PROFIT!</li>
+    </ol>
+</div>
+{% endblock %}

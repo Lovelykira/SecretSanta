@@ -1,0 +1,155 @@
+.container{
+    width : 1000px;
+    text-align: center;
+    font-family: 'Neucha';
+    font-size: 16px;
+    border-radius: 10px;
+    min-height: 400px;
+    background: white;
+}
+
+.btn-primary{
+    background: #062f01;
+}
+
+.btn-primary:hover{
+    background: #9d0606;
+}
+
+.btn-primary:focus
+{
+    background: #9d0606;
+}
+
+.rules{
+    margin: auto;
+    text-align: left;
+    width: 350px;
+}
+
+.login-username,
+.login-pass{
+    width: 300px;
+}
+
+.login-pass{
+    margin: 0 0 0 70px;
+}
+
+.login-form{
+text-align: center;
+display: block;
+#margin: auto;
+}
+
+.registr-form{
+text-align: left;
+display: block;
+}
+
+.private-office-form{
+text-align: left;
+display: block;
+}
+
+.reqistr-real-name,
+.reqistr-username,
+.reqistr-fav-film,
+.reqistr-fav-game,
+.reqistr-fav-color,
+.reqistr-fav-present,
+.registr-pass1,
+.registr-pass2{
+    width: 400px;
+    position: absolute;
+    right: 300px;
+}
+.reqistr-hobbies{
+    width: 400px;
+    height:100px;
+    position: absolute;
+    right: 300px;
+    resize: none;
+}
+
+.reqistr-key-words{
+    width: 400px;
+    height:100px;
+    position: absolute;
+    right: 300px;
+    resize: none;
+    margin: 80px 0 0 0 ;
+}
+
+.registr-pass1,
+label[for="id_password1"]{
+    margin: 80px 0 0 0 ;
+}
+
+label[for="id_key_words"]{
+margin: 80px 0 0 0 ;
+}
+
+.private-office-change-keywords-label,
+.private-office-change-btn{
+    margin: 85px 0 0 0;
+}
+
+.errorlist{
+    list-style-type: none;
+    color: red;
+}
+
+.navbar-default {
+  background-color: #062f01;
+  border-color: #9d0606;
+}
+.navbar-default .navbar-brand {
+  color: #f0ff00;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ea0505;
+}
+.navbar-default .navbar-text {
+  color: #f0ff00;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #f0ff00;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ea0505;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #f0ff00;
+  background-color: #9d0606;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ea0505;
+  background-color: #9d0606;
+}
+.navbar-default .navbar-toggle {
+  border-color: #9d0606;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #9d0606;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #f0ff00;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #f0ff00;
+}
+.navbar-default .navbar-link {
+  color: #f0ff00;
+}
+.navbar-default .navbar-link:hover {
+  color: #ea0505;
+}

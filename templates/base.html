@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bad+Script">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Neucha">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
+    <title>SecretSanta</title>
+     {% block head %}
+    <nav class="navbar navbar-default navbar-top">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">SecretSanta</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                {% if not user.is_authenticated %}
+                <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="/register/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                {% else %}
+                {%block santa_for%}
+                <li><a href="/santa_for/"><span class="glyphicon glyphicon-gift"></span></a></li>
+                {% endblock %}
+                {%block private_office%}
+                <li><a href="/private_office/"><span class="glyphicon glyphicon-home"></span> Santa's Home</a></li>
+                {% endblock %}
+                <li><a href="/logout/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    {% endblock %}
+
+</head>
+<body>
+<div class="container">
+{% block main %}
+{% endblock %}
+</div>
+</body>
+</html>

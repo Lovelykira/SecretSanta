@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%block private_office%}
+    <li class="active"><a href="/private_office/"><span class="glyphicon glyphicon-home"></span> Santa's Office</a></li>
+{% endblock %}
+{% block main %}
+<h3>Твой личный кабинет</h3>
+Имя пользователя: {{user.username}} <br>
+Настоящее имя: {{user.real_name}} <br>
+Любимый фильм: {{user.fav_film}} <br>
+Любимая игра: {{user.fav_game}} <br>
+Любимый цвет: {{user.fav_color}} <br>
+Лучший подарок, который тебе дарили: {{user.fav_present}} <br>
+Хобби: {{user.hobbies}} <br>
+Слова для Санты: {{user.key_words}} <br>
+<br>
+<a href="/private_office_change/" class="btn btn-primary">Изменить</a>
+{% endblock %}

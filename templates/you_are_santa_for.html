@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{%block santa_for%}
+    <li class="active"><a href="/santa_for/"><span class="glyphicon glyphicon-gift"></span></a></li>
+{% endblock %}
+
+{% block main %}
+{% if user.santa_for == Null%}
+Sorry :C
+{%else %}
+{{user.santa_for.real_name}}
+{{user.santa_for.fav_present}}
+{{user.santa_for.fav_game}}
+{% endif%}
+{%endblock %}
