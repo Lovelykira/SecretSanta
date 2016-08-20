@@ -8,6 +8,7 @@ from django.template import RequestContext
 from django.views import View
 from django.views.generic import TemplateView, FormView, UpdateView
 from random import choice
+import random
 from django.contrib.admin.views.decorators import staff_member_required
 from django.utils.decorators import method_decorator
 
@@ -88,12 +89,23 @@ class SecretButton(TemplateView):
 
 
     def post(self, request, *args, **kwargs):
-        users = MyUser.objects.all()
-        for user in users:
-            if self.get_users(user, users, True) != []:
-                user.santa_for = choice(self.get_users(user, users, True))
-            else:
-                user.santa_for = choice(self.get_users(user, users, False))
-            user.santa_for.is_taken = True
-            user.save()
+        users = list(MyUser.objects.all())
+        random.shuffle(users)
+        for i in range(0, len(users)-1):
+            users[i].santa_for = users[i+1]
+            users[i].santa_for.is_taken = True
+            users[i].save()
+        users[-1].santa_for = users[0]
+        users[0].santa_for.is_taken = True
+        users[-1].save()
+
+        # for user in users:
+        #     if self.get_users(user, users, True) != []:
+        #         user.santa_for = choice(self.get_users(user, users, True))
+        #     else:
+        #         user.santa_for = choice(self.get_users(user, users, False))
+        #     user.santa_for.is_taken = True
+        #     user.save()
         return HttpResponseRedirect('/santa_for/')
+
+

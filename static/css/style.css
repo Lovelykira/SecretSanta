@@ -1,11 +1,19 @@
+body{
+	background:red;
+}
+
 .container{
     width : 1000px;
     text-align: center;
     font-family: 'Neucha';
     font-size: 16px;
     border-radius: 10px;
-    min-height: 400px;
+  #  min-height: 400px;
     background: white;
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    margin: 30px auto;
 }
 
 .btn-primary{
@@ -16,9 +24,10 @@
     background: #9d0606;
 }
 
-.btn-primary:focus
-{
-    background: #9d0606;
+.btn-primary:hover:active,
+.btn-primary:active,
+.btn-primary:focus{
+    background-color: #9d0606 !important;
 }
 
 .rules{
@@ -37,9 +46,8 @@
 }
 
 .login-form{
-text-align: center;
 display: block;
-#margin: auto;
+margin: 100px 0;
 }
 
 .registr-form{
@@ -62,13 +70,13 @@ display: block;
 .registr-pass2{
     width: 400px;
     position: absolute;
-    right: 300px;
+    right: 200px;
 }
 .reqistr-hobbies{
     width: 400px;
     height:100px;
     position: absolute;
-    right: 300px;
+    right: 200px;
     resize: none;
 }
 
@@ -76,7 +84,7 @@ display: block;
     width: 400px;
     height:100px;
     position: absolute;
-    right: 300px;
+    right: 200px;
     resize: none;
     margin: 80px 0 0 0 ;
 }
@@ -99,6 +107,13 @@ margin: 80px 0 0 0 ;
     list-style-type: none;
     color: red;
 }
+
+#drawingCanvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
 
 .navbar-default {
   background-color: #062f01;
@@ -152,4 +167,47 @@ margin: 80px 0 0 0 ;
 }
 .navbar-default .navbar-link:hover {
   color: #ea0505;
+}
+
+
+.canvas_crash {
+   # background:blue;
+    position: absolute;
+    margin: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+
+#container-crash {
+    position: absolute;
+    width: 880px;
+    height: 550px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+}
+
+#container-crash:not(.no-hover):hover{
+    -webkit-box-shadow:0 0 50px blue;
+    -moz-box-shadow: 0 0 50px blue;
+    box-shadow:0 0 50px blue;
+}
+
+img {
+    max-width: 950px;
+    max-height: 550px;
+}
+
+
+.santafor-descr{
+display: inline-block;
+    #width: 50%;
+    margin: auto;
+    text-align: left;
 }

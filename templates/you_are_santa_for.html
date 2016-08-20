@@ -1,14 +1,22 @@
 {% extends 'base.html' %}
+{% block script_crash%}
+    <script src="/static/js/crash.js"></script>
+{%endblock%}
 {%block santa_for%}
     <li class="active"><a href="/santa_for/"><span class="glyphicon glyphicon-gift"></span></a></li>
 {% endblock %}
 
 {% block main %}
-{% if user.santa_for == Null%}
-Sorry :C
-{%else %}
-{{user.santa_for.real_name}}
-{{user.santa_for.fav_present}}
-{{user.santa_for.fav_game}}
+<div id="container-crash"></div>
+<h3>В этом году ты Санта для: {{user.santa_for.real_name}}</h3><br>
+<div class="santafor-descr">
+{% if user.santa_for is not Null%}
+Любимый фильм: {{user.santa_for.fav_film}} <br>
+Любимая игра: {{user.santa_for.fav_game}} <br>
+Любимый цвет: {{user.santa_for.fav_color}} <br>
+Лучший подарок: {{user.santa_for.fav_present}} <br>
+Хобби: {{user.santa_for.hobbies}} <br>
+Слова для Санты: {{user.santa_for.key_words}}
 {% endif%}
+</div>
 {%endblock %}
