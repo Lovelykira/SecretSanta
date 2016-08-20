@@ -116,25 +116,25 @@ margin: 80px 0 0 0 ;
 
 
 .navbar-default {
-  background-color: #062f01;
-  border-color: #9d0606;
+  background-color: red;
+  border-color: red;
 }
 .navbar-default .navbar-brand {
-  color: #f0ff00;
+  color: white;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: #ea0505;
 }
 .navbar-default .navbar-text {
-  color: #f0ff00;
+  color: white;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #f0ff00;
+  color: white;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #ea0505;
+  color: #f0ff00;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,

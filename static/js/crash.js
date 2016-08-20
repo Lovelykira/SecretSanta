@@ -46,6 +46,7 @@ function placeImage(transitionIn) {
 }
 
 function imageClickHandler(event) {
+jQuery(container).addClass('no-hover');
     var box = image.getBoundingClientRect(),
         top = box.top,
         left = box.left;
@@ -143,7 +144,7 @@ function shatterCompleteHandler() {
     indices.length = 0;
 
 //    placeImage();
-    jQuery(container).addClass('no-hover');
+
  //   jQuery(maincontainer[0]).css('height', '100%');
 }
 
