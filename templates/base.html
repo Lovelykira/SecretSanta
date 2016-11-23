@@ -30,7 +30,11 @@
                 <li><a href="/register/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 {% else %}
                 {%block santa_for%}
+                {% if user.santa_for %}
                 <li><a href="/santa_for/"><span class="glyphicon glyphicon-gift"></span></a></li>
+                {%else %}
+                <li class="disabled"><a href="#"><span class="glyphicon glyphicon-gift"></span></a></li>
+                {%endif%}
                 {% endblock %}
                 {%block private_office%}
                 <li><a href="/private_office/"><span class="glyphicon glyphicon-home"></span> Santa's Home</a></li>
